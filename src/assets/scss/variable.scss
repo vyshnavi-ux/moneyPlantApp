@@ -3,3 +3,18 @@ $bg-white:#ffffff;
 $color-white:#ffffff;
 $btn-color-success:#69B130;
 $color-default:#000000;
+$input-border:#E6E6E6;
+
+// button mixins
+@mixin button-bg($bg) {
+    background: $bg;
+    border: none;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
+// ends button mixins 

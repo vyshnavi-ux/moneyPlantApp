@@ -3,21 +3,20 @@
     header{
         height: 10%;
         box-shadow: 0px 15px 10px -15px #E2E2E2;  
+        padding: 0 10vw;
         .logo{
             .fa-bars{
                 color: $btn-color-success;
             }
         }
         nav{
-            position: relative;
-            left: -7vw;
             ul{
                 li{
                     list-style-type: none;
                     a{
                         text-decoration: none;
                         color: $color-default;
-                        font-family: 'Trebuchet MS', sans-serif;
+                        font-size: 14px;
                         &:hover{
                             color: $btn-color-success;
                         }
@@ -30,9 +29,58 @@
         }
         .search-button{
             .login{
-                background-color: $btn-color-success;
-                border: none;
-                font-family: 'Trebuchet MS', sans-serif;
+                @include button-bg($btn-color-success);
+            }
+        }
+    }
+    section{
+        height: calc(100% - 10%);
+        overflow: auto;
+        .container{
+            .find-expert-container{
+                .title{
+                    color: $heading-color;
+                }
+                .search-place-container{
+                   button{
+                    @include button-bg($btn-color-success);
+                    height: 30px;
+                   }
+                   input[type="text"]{
+                    border: 1px solid $input-border;
+                    color: $heading-color;
+                    height: 30px;
+                    font-size: 12px;
+                    padding-left: 30px;
+                    &:focus,&:active,&:focus-visible{
+                        border: 1px solid $heading-color;
+                        outline: none;
+                    }
+                   }
+                   .location-fetch{
+                    position: relative;
+                    i{
+                        color: $heading-color;
+                        position: absolute;
+                        left: 10px;
+                        top: 5px;
+                        font-size: 20px;
+                    }
+                   }
+                   .search-expert-container{
+                    position: relative;
+                    .fa-search{
+                        color: $heading-color;
+                        position: absolute;
+                        left: 10px;
+                        top: 7px;
+                        font-size: 14px;
+                    }
+                    input{
+                        min-width: 350px;
+                    }
+                   }
+                }
             }
         }
     }

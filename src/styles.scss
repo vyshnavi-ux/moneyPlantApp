@@ -11,5 +11,7 @@ html{
     body{
         @extend html;
         background-color: $bg-white;
+        // font-family: 'Open Sans', sans-serif;
+        font-family: 'Be Vietnam Pro', sans-serif;
     }
 }
