@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExpertProfilePageComponent } from './expert-profile-page/expert-profile-page.component';
+import { SearcresultsComponent } from './searcresults/searcresults.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExpertProfilePageComponent
+    ExpertProfilePageComponent,
+    SearcresultsComponent
   ],
   imports: [
     BrowserModule,

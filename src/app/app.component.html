@@ -30,14 +30,16 @@
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                         <div class="search-expert-container">
-                            <input type="text" formControlName="tradeExpertSearch" />
+                            <input type="text"  formControlName="tradeExpertSearch" placeholder="Trading Expert" />
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
-                        <button class="btn btn-success btn-sm">Search</button>
+                        <button [disabled]="findExpertForm.invalid" (click)="findExpertPro()" class="btn btn-success btn-sm">Search</button>
                     </div>
                 </form>
             </div>
-            <router-outlet></router-outlet>
+            <!-- <router-outlet></router-outlet> -->
+            <app-expert-profile-page *ngIf="profileLandingPage"></app-expert-profile-page>
+            <app-searcresults *ngIf="!profileLandingPage"></app-searcresults>
         </div>
         <footer>
 
