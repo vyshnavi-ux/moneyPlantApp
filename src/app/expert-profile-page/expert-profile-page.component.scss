@@ -14,5 +14,65 @@
             width: fit-content;
             color: $color-white;
         }
+        h2{
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+    }
+    .experts-heading{
+        h6{
+            color: #14718A;
+        }
+        .btn-success{
+            @include button-bg($btn-color-success);
+            border-radius: 0;
+            text-transform: capitalize;
+        }
+    }
+    .expert-profile-row{
+        border-bottom: 1px solid #E0E0E0;
+        padding-bottom: 50px;
+        .card {
+            width: calc((100% - 1vw)/4);
+            margin: 1vw;
+            height: 250px;
+            text-align: center;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            img{
+                height: 100%;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+            }
+            h6{
+                color: #14718A;
+                padding: 2px 0;
+                margin-top: 0.5rem;
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+        }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .experts-heading{
+        flex-direction: column;
+        button{
+            width: fit-content;
+            margin: 10px 0;
+        }
+        h6{
+            padding: 0 7.5vw;
+        }
+    }
+    .expert-profile-row{
+        flex-direction: column;
+        .card{
+            width: 100% !important;
+            margin: 1vw 0 !important;
+        }
+    }
+}
+
+

@@ -13,6 +13,12 @@
             ul{
                 li{
                     list-style-type: none;
+                    @media only screen and (max-width: 600px) {
+                        margin: 5px 0 10px 0;
+                       &:first-child{
+                        margin-left: 0;
+                       }
+                    }
                     a{
                         text-decoration: none;
                         color: $color-default;
@@ -36,6 +42,7 @@
     section{
         height: calc(100% - 10%);
         overflow: auto;
+        scroll-behavior: smooth;
         .container{
             .find-expert-container{
                 .title{
@@ -85,3 +92,46 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    header{
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: center !important;
+        nav,.search-button{
+            display: none;
+        }
+    }
+    section{
+        .search-place-container{
+            flex-direction: column;
+            .location-fetch,.search-expert-container,button{
+                max-width: 100% !important;
+                margin: 5px 0;
+                input{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #14718A; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #14718A; 
+  }
