@@ -59,7 +59,7 @@
             <button class="btn btn-success">Read More</button>
         </div>
     </div>
-    <div class="register-profile ">
+    <div class="register-profile d-flex">
         <div class="register-des">
             <h2>Become A Financial Advisor 
                 At Money Plant</h2>
@@ -75,16 +75,24 @@
         </div>
         <div class="register-form">
             <form>
-                <label>Name</label>
-                <input type="text"  placeholder="Name">
-                <label>Mobile Number</label>
-                <input type="text"  placeholder="Mobile Number">
-                
-                
-                <label>Email Id</label>
-                <input type="text"  placeholder="Email Id">
-                <label>Create Paaword</label>
-                <input type="Password" placeholder="8 Digit Password"> 
+                <div class="name-container w-100 d-flex flex-column my-3">
+                    <label>Name</label>
+                    <input type="text"  placeholder="Name">
+                </div>
+                <div class="email-mobile d-flex w-100 my-3">
+                    <div class="mobile w-25 d-flex flex-column">
+                        <label>Mobile Number</label>
+                        <input type="text"  placeholder="Mobile Number">
+                    </div>
+                    <div class="emailid w-75 d-flex flex-column">
+                        <label>Email Id</label>
+                        <input type="text"  placeholder="Email Id">
+                    </div>
+                </div>
+                <div class="password w-100 d-flex flex-column">
+                    <label>Create Paaword</label>
+                    <input type="Password" placeholder="8 Digit Password">
+                </div> 
 
 
                 

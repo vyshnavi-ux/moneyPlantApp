@@ -54,7 +54,48 @@
         }
     }
     .register-profile{
+        .register-des{
+            width: calc((100% - 4vw)/2);
+            margin: 0 1vw;
+            padding-right: 5vw;
+            h2{
+                font-weight: bolder;
+                font-size: 1.5vw;
+                color: #003255;
+            }
+            h3{
+                color: #006580;
+                font-weight: bolder;
+                font-size: 1.2vw;
+                margin: 2vw 0;
+            }
+            p{
+                font-size: 11px;
+                color: #4a4a4a;
+            }
+        }
+        .register-form{
+            width: calc((100% - 4vw)/2);
+            margin: 0 1vw;
+            input{
+                border-radius: 25px;
+                border: 1px solid #D8D8D8;
+                padding: 0.5vw 0.7vw;
+            }
+            label{
+                margin-bottom: 5px;
+                padding-left: 1vw;
+            }
+            .emailid{
+                margin-left: 10px;
+            }
+            .name-container{
+                margin-top: 0 !important;
+            }
+            .name-container{
 
+            }
+        }
     }
     .article{
         .left,.right,.center{
@@ -107,6 +148,26 @@
     }
     .register-profile,.article{
         flex-direction: column;
+    }
+    .register-profile{
+        .register-des {
+            width: 100% !important;
+            padding-right: 0 !important;
+        }
+        .register-form {
+            width: 100% !important;
+            .email-mobile {
+                flex-direction: column;
+                .mobile{
+                    width: 100% !important;
+                    margin: 0.5rem 0 !important;
+                }
+                .emailid{
+                    margin: 0.5rem 0 !important;
+                    width: 100% !important;
+                }
+            }
+        }
     }
     .article{
         .left,.right,.center{
