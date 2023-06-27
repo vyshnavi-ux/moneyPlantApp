@@ -1,7 +1,7 @@
 <div class="container-fluid w-100 h-100 p-0">
     <header class="w-100 d-flex justify-content-between align-items-center">
         <div class="logo">
-            <i class="fa fa-bars mt-1"  aria-hidden="true"></i>
+            <i class="fa fa-bars mt-1" aria-hidden="true"></i>
             <!-- <svg xmlns="http://www.w3.org/2000/svg"  height="1em" viewBox="0 0 448 512">! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path fill="#69B130" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg> -->
             <img [src]="logoImage" class="mx-2" alt="logo">
         </div>
@@ -30,10 +30,11 @@
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </div>
                         <div class="search-expert-container">
-                            <input type="text"  formControlName="tradeExpertSearch" placeholder="Trading Expert" />
+                            <input type="text" formControlName="tradeExpertSearch" placeholder="Trading Expert" />
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </div>
-                        <button [disabled]="findExpertForm.invalid" (click)="findExpertPro()" class="btn btn-success btn-sm">Search</button>
+                        <button [disabled]="findExpertForm.invalid" (click)="findExpertPro()"
+                            class="btn btn-success btn-sm">Search</button>
                     </div>
                 </form>
             </div>
@@ -41,8 +42,68 @@
             <app-expert-profile-page *ngIf="profileLandingPage"></app-expert-profile-page>
             <app-searcresults *ngIf="!profileLandingPage"></app-searcresults>
         </div>
-        <footer>
-
-        </footer>
+        <div class="footer-container">
+            <footer>
+                <div class="row-container d-flex container py-4">
+                    <div class="row1">
+                        <h6>MONEY PLANT</h6>
+                        <ul class="m-0 p-0">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condation</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                    <div class="row2">
+                        <h6>EXPLORE</h6>
+                        <ul class="m-0 p-0">
+                            <li><a href="#">Advisor</a></li>
+                            <li><a href="#">Consulting Campanies</a></li>
+                            <li><a href="#">Leamers Corner</a></li>
+                            <li><a href="#">Top Investments</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Stock Investments</a></li>
+                        </ul>
+                    </div>
+                    <div class="row3">
+                        <h6>TOP COURSES</h6>
+                        <ul class="m-0 p-0">
+                            <li><a href="#">Financial Markets</a></li>
+                            <li><a href="#">Master of Management</a></li>
+                            <li><a href="#">Money Management</a></li>
+                            <li><a href="#">Stock Markets</a></li>
+                            <li><a href="#">Basics Of Finance</a></li>
+                            <li><a href="#">Tax Savings</a></li>
+                        </ul>
+                    </div>
+                    <div class="row4">
+                        <h6>QUICK LINKS</h6>
+                        <ul class="m-0 p-0">
+                            <li><a href="#">Community Memberiship</a></li>
+                            <li><a href="#">Frequently asked Qustions</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Articles</a></li>
+                            <li><a href="#">Trending Now</a></li>
+                            <li><a href="#">Glossary</a></li>
+                        </ul>
+                    </div>
+                    <div class="row5">
+                        <h6>CONTACT US</h6>
+                        <ul class="m-0 p-0">
+                            <li><a href="#">email@example.com</a></li>
+                            <li><a href="#">002-010-66269735</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <div class="copy-container ">
+                <div class="container h-100 d-flex align-items-center">
+                    <h6 class="mb-0">@Coptright 2021 moneyplant.com | All Rights Reserved</h6>
+                </div>
+            </div>
+        </div>
+        
     </section>
 </div>

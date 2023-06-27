@@ -53,6 +53,38 @@
             }
         }
     }
+    .register-profile{
+
+    }
+    .article{
+        .left,.right,.center{
+            width: calc((100% - 9vw)/2);
+            margin: 0 1.5vw;
+            h2{
+                font-size: 1.5vw;
+                color: #003255;
+                font-weight: 600;
+            }
+            h4{
+                font-size: 1vw;
+                color: #003255;
+                font-weight: 600;
+            }
+            h6,h5{
+                font-size: 12px;
+                margin: 15px 0;
+            }
+            button{
+                @include button-bg($btn-color-success);
+                border-radius: 0;
+                text-transform: capitalize;
+                font-size: 1vw;
+                background-color: #003255;
+                border-radius: 7px;
+            }
+        }
+        
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -69,6 +101,15 @@
     .expert-profile-row{
         flex-direction: column;
         .card{
+            width: 100% !important;
+            margin: 1vw 0 !important;
+        }
+    }
+    .register-profile,.article{
+        flex-direction: column;
+    }
+    .article{
+        .left,.right,.center{
             width: 100% !important;
             margin: 1vw 0 !important;
         }

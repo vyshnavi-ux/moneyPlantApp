@@ -1,137 +1,224 @@
 @import '../assets/scss/variable.scss';
-.container-fluid{
-    header{
+
+.container-fluid {
+    header {
         height: 10%;
-        box-shadow: 0px 15px 10px -15px #E2E2E2;  
+        box-shadow: 0px 15px 10px -15px #E2E2E2;
         padding: 0 10vw;
-        .logo{
-            .fa-bars{
+
+        .logo {
+            .fa-bars {
                 color: $btn-color-success;
             }
         }
-        nav{
-            ul{
-                li{
+
+        nav {
+            ul {
+                li {
                     list-style-type: none;
+
                     @media only screen and (max-width: 600px) {
                         margin: 5px 0 10px 0;
-                       &:first-child{
-                        margin-left: 0;
-                       }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
                     }
-                    a{
+
+                    a {
                         text-decoration: none;
                         color: $color-default;
                         font-size: 14px;
-                        &:hover{
+
+                        &:hover {
                             color: $btn-color-success;
                         }
-                        &:active{
+
+                        &:active {
                             color: $btn-color-success;
                         }
                     }
                 }
             }
         }
-        .search-button{
-            .login{
+
+        .search-button {
+            .login {
                 @include button-bg($btn-color-success);
             }
         }
     }
-    section{
+
+    section {
         height: calc(100% - 10%);
         overflow: auto;
         scroll-behavior: smooth;
-        .container{
-            .find-expert-container{
-                .title{
+
+        .container {
+            .find-expert-container {
+                .title {
                     color: $heading-color;
                 }
-                .search-place-container{
-                   button{
-                    @include button-bg($btn-color-success);
-                    height: 30px;
-                   }
-                   input[type="text"]{
-                    border: 1px solid $input-border;
-                    color: $heading-color;
-                    height: 30px;
-                    font-size: 12px;
-                    padding-left: 30px;
-                    &:focus,&:active,&:focus-visible{
-                        border: 1px solid $heading-color;
-                        outline: none;
+
+                .search-place-container {
+                    button {
+                        @include button-bg($btn-color-success);
+                        height: 30px;
                     }
-                   }
-                   .location-fetch{
-                    position: relative;
-                    i{
+
+                    input[type="text"] {
+                        border: 1px solid $input-border;
                         color: $heading-color;
-                        position: absolute;
-                        left: 10px;
-                        top: 5px;
-                        font-size: 20px;
+                        height: 30px;
+                        font-size: 12px;
+                        padding-left: 30px;
+
+                        &:focus,
+                        &:active,
+                        &:focus-visible {
+                            border: 1px solid $heading-color;
+                            outline: none;
+                        }
                     }
-                   }
-                   .search-expert-container{
-                    position: relative;
-                    .fa-search{
-                        color: $heading-color;
-                        position: absolute;
-                        left: 10px;
-                        top: 7px;
-                        font-size: 14px;
+
+                    .location-fetch {
+                        position: relative;
+
+                        i {
+                            color: $heading-color;
+                            position: absolute;
+                            left: 10px;
+                            top: 5px;
+                            font-size: 20px;
+                        }
                     }
-                    input{
-                        min-width: 350px;
+
+                    .search-expert-container {
+                        position: relative;
+
+                        .fa-search {
+                            color: $heading-color;
+                            position: absolute;
+                            left: 10px;
+                            top: 7px;
+                            font-size: 14px;
+                        }
+
+                        .fa-times {
+                            position: absolute;
+                            right: 5px;
+                            color: $heading-color;
+                            top: 7px;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+
+                        input {
+                            min-width: 350px;
+                        }
                     }
-                   }
                 }
+            }
+        }
+    }
+    .footer-container{
+        footer {
+            background-color: #006580;
+
+            .row-container {
+                color: $bg-white;
+                .row1,.row2,.row3,.row4,.row5{
+                    width: calc(100%/5);
+                }
+
+                h6 {
+                    font-size: 14px;   
+                }
+
+                ul {
+                    list-style-type: none;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: $bg-white;
+                            font-size: 10px;
+                            font-weight: 100;
+                        }
+                    }
+                }
+            }
+        }
+        .copy-container{
+            background-color: #041622;
+            color: $bg-white;
+            height: 30px;
+            h6{
+                font-size: 10px;
             }
         }
     }
 }
 
 @media only screen and (max-width: 600px) {
-    header{
+    header {
         flex-direction: column;
         align-items: flex-start !important;
         justify-content: center !important;
-        nav,.search-button{
+
+        nav,
+        .search-button {
             display: none;
         }
     }
-    section{
-        .search-place-container{
+
+    section {
+        .search-place-container {
             flex-direction: column;
-            .location-fetch,.search-expert-container,button{
+
+            .location-fetch,
+            .search-expert-container,
+            button {
                 max-width: 100% !important;
                 margin: 5px 0;
-                input{
+
+                input {
                     width: 100% !important;
                 }
             }
         }
     }
+    .footer-container{
+        .row-container{
+            flex-direction: column;
+            .row1,.row2,.row3,.row4,.row5{
+                width: 100% !important;
+                margin: 5vw 0 !important;
+                text-align: center;
+            }
+            .row1{
+                margin-top: 0 !important;
+            }
+        }
+    }
 }
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2px grey; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #14718A; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #14718A;
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #14718A; 
-  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #14718A;
+}
